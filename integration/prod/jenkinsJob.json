@@ -1,0 +1,9 @@
+{
+  "deployment": {
+    "server": "gc-dp-pdpprd-app-01",
+    "folder": "/opt/1/pdp/projects/pdp-cloud-ml-magic/lib"
+  },
+  "project": {
+    "name": "PDP_MAGIC_CLOUD_ML"
+  }
+}

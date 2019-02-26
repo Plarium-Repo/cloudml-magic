@@ -87,3 +87,17 @@ ENV/
 
 # Rope project settings
 .ropeproject
+
+\.idea/cloudml-magic\.iml
+
+\.idea/dbnavigator\.xml
+
+\.idea/modules\.xml
+
+\.idea/sbt\.xml
+
+\.idea/vcs\.xml
+
+\.idea/workspace\.xml
+
+\.idea/codeStyles/Project\.xml
