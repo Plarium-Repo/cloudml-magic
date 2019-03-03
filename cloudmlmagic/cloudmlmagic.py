@@ -114,12 +114,13 @@ class MLMagics(Magics):
             parent=self.settings.projectId,
             body={'jobId': self.job_id,
                   'trainingInput': {'scaleTier': self.settings.scaleTier,
-                                    # 'masterType': 'standard_gpu',
-                                    # 'workerType': 'standard_gpu',
+                                    'masterType': self.settings.masterType,#'standard_gpu',
+                                    'workerType': self.settings.masterType,#'standard_gpu',
                                     'packageUris': [gsfilepath],
                                     'pythonModule': 'trainer.task',
                                     'region': self.settings.region,
-                                    'runtimeVersion': self.settings.runtimeVersion
+                                    'runtimeVersion': self.settings.runtimeVersion,
+				    'workerCount': self.settings.workerCount
                                     }
                   }
         )
