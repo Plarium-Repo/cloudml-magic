@@ -26,7 +26,10 @@ class MLMagics(Magics):
          -bucket BUCKET
          -region us-central1
          -scaleTier BASIC
-         -runtimeVersion 1.0"""
+         -runtimeVersion 1.0
+	 -masterType standard_gpu 
+	 -workerType standard_gpu 
+	 -workerCount 1"""
 
         parser = argparse.ArgumentParser()
         parser.add_argument('-projectId', required=True)
@@ -34,6 +37,9 @@ class MLMagics(Magics):
         parser.add_argument('-region', default='us-central1')
         parser.add_argument('-scaleTier', default='BASIC')
         parser.add_argument('-runtimeVersion', default='1.0')
+	parser.add_argument('-masterType', default='standard_gpu')
+	parser.add_argument('-workerType', default='standard_gpu')
+	parser.add_argument('-workerCount', default='1')
 
         settings = parser.parse_args(line.split())
 
